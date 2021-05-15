@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +27,10 @@
         </nav>
 
         <!--logout-->
-            <form class="cta" action="includes/logout.inc.php" method="POST">
-                <button type="submit" name="logout-submit">LOGOUT</button> 
-            </form>
-
+        <?php
+        if (isset($_SESSION['userId']))
+           echo' <form class="cta" action="includes/logout.inc.php" method="POST">
+                    <button type="submit" name="logout-submit">LOGOUT</button> 
+                </form>';
+        ?>
         </header>

@@ -1,4 +1,4 @@
-.loginForm{
+.loginForm, .signupForm{
     background-color: rgba(228, 140, 140,0.6);
     width: 300px;
     height: 320px;
@@ -11,6 +11,11 @@
     box-shadow: 8px 8px 50px #000;
     border-radius: 10%;
 }
+.signupForm{
+    
+    width: 400px;
+    height: 420px;
+}
 
 .logintitle{
     margin: 0;
@@ -20,9 +25,10 @@
     font-weight: bold;
     font-size: 16px;
     text-align: center;
+    
 }
 
-.loginForm input{
+.loginForm input, .signupForm input{
     width: 100%;
     margin-bottom: 20px;
     border: none;
@@ -42,5 +48,16 @@
 }
 
 .signuplink:hover{
+    color: red;
+}
+
+
+
+/*errors*/
+.signuperrors{
+    color: red;
+}
+
+.contenueH{
     color: red;
 }

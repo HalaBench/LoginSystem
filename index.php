@@ -4,23 +4,34 @@
 
 
 <main>
+    <?php
+
+        if (!isset($_SESSION['userId'])) {
+                
+               echo' <div class="loginForm">';
+                   echo '<h1 class="logintitle">LOGIN</h1>';
+
+                    echo'<!--login form-->
+                        <form action="includes/login.inc.php" method="POST">
+                        <input type="text" name="mailuid" placeholder="Username/E-mail...">
+                        <input type="password" name="pwd" placeholder="*********">
+                        <button type="submit" name="login-submit">LOGIN</button> 
+                        </form>
 
 
-        <div class="loginForm">
-            <p class="logintitle">LOGIN</p>
+                        <!--signup-->
+                        <a class="signuplink" href="signup.php">Signup</a>
 
-            <!--login form-->
-            <form action="includes/login.inc.php" method="POST">
-               <input type="text" name="mailuid" placeholder="Username/E-mail...">
-               <input type="password" name="pwd" placeholder="*********">
-               <button type="submit" name="login-submit">LOGIN</button> 
-            </form>
+                </div>';
 
+            }
 
-            <!--signup-->
-            <a class="signuplink" href="signup.php">Signup</a>
+        else {
+            echo '<h1 class="contenueH">YOU ARE CONNECTED!</h1>';
+        }
+        ?>
 
-        </div>
+        
 
 
 </main>
